@@ -1,0 +1,13 @@
+Atom  
+C1
+C2
+C3
+C4
+C5
+O5
+Residue
+RESIDUE_NUMBER
+Cutoff
+20
+Path
+/home/o/Programs/BFMP/canonicals.txt

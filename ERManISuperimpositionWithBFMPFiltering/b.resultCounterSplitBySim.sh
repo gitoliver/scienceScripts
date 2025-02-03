@@ -10,7 +10,7 @@ simReplicateList=$1
 folderList=$2
 
 echo "Counting number of structures with 0-5 overlaps:"
-echo "Glycosite   | Sim | NoClash | Total"
+echo "Glycosite,Sim,NoClash,Total"
 for folder in `cat $folderList`
 do
     i=0
@@ -18,7 +18,7 @@ do
     do
         totalStructures=`ls $folder/$simReplicate-ss*-proteinOverlaps.txt | grep -c "."`
         totalNonClashing=`grep "^[0-5] contacts$" $folder/$simReplicate-ss*-proteinOverlaps.txt | grep -c "."`
-        echo "$folder |  $i  | $totalNonClashing | $totalStructures"
+        echo "$folder,$i,$totalNonClashing,$totalStructures"
         i=$(($i + 1))
     done
 done

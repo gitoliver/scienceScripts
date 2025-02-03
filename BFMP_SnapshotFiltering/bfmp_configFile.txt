@@ -10,4 +10,4 @@ RESIDUE_NUMBER
 Cutoff
 20
 Path
-/home/o/Programs/BFMP/canonicals.txt
+/home/oliver/Programs/BFMP/canonicals.txt

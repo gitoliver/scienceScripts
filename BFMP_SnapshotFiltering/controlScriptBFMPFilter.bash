@@ -15,7 +15,7 @@ filterListOutName=filterList.out
 for folder in $(cat $snapshotFolderList)
 do
     echo "Doing $folder"
-    bash /home/o/Programs/scienceScripts/BFMP_SnapshotFiltering/filterNon1C4GlcNAcSnapshots.bash $nagResidueList $folder /home/o/Programs/scienceScripts/BFMP_SnapshotFiltering/bfmp_configFile.txt $filterListOutName > tmp.out
+    bash /home/oliver/Programs/scienceScripts/BFMP_SnapshotFiltering/filterNon1C4GlcNAcSnapshots.bash $nagResidueList $folder /home/oliver/Programs/scienceScripts/BFMP_SnapshotFiltering/bfmp_configFile.txt $filterListOutName > tmp.out
     cat $filterListOutName >> collated_$filterListOutName
     echo "Done"
 done

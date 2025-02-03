@@ -24,7 +24,7 @@ do
     for snapshot in $(ls $snapshotFolder)
     do
         echo "Checking $snapshotFolder/$snapshot"
-        /home/o/Programs/BFMP/detect_shape $snapshotFolder/$snapshot tmpConfig.txt
+        /home/oliver/Programs/BFMP/detect_shape $snapshotFolder/$snapshot tmpConfig.txt
         if [ $(grep -c "4d1" ring_conformations.txt) -eq 0 ]; then
             echo "$snapshotFolder/$snapshot: Residue $glcNAc does not have a BFMP 4d1 shape (iupac 4C1) within cutoff (see $bfmpConfigFile for cutoff used)"
             printf "%s,%s,%s\n" $glcNAc $snapshotFolder $snapshot >> $snapshotsToFilterOut

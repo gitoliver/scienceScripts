@@ -13,5 +13,5 @@ do
     sed "s/VMB_RESIDUE/$alignmentResidue/g" $alignerInputs > $alignmentResidue.alignerInputs.txt
     rm -rf $alignmentResidue.outputs
     mkdir $alignmentResidue.outputs
-    bash /home/o/Programs/scienceScripts/ERManISuperimpositionWithBFMPFiltering/a.aligner_WithLimit_AndFilter.sh $simulationReplicates $inputFolder $alignmentResidue.outputs $alignmentResidue.alignerInputs.txt $filterFile $alignmentResidue
+    bash /home/oliver/Programs/scienceScripts/ERManISuperimpositionWithBFMPFiltering/a.aligner_WithLimit_AndFilter.sh $simulationReplicates $inputFolder $alignmentResidue.outputs $alignmentResidue.alignerInputs.txt $filterFile $alignmentResidue
 done

@@ -23,14 +23,14 @@ do
         p=0 # protein non clashing count
         pg=0 # protein plus glycan non-clashing
         pgc=0 # protein plus glycan core non-clashing (the core is the two GlcNAcs plus Manb)
-        for file in $(grep -l "^[0-9] contacts$" $folder/$simReplicate-ss*-proteinOverlaps.txt)
+        for file in $(grep -l "^[0-5] contacts$" $folder/$simReplicate-ss*-proteinOverlaps.txt)
         do
             p=$(($p + 1))
             commonName=$( echo $file | cut -d \- -f 1-3 )
-            if grep -q "^[0-9] contacts$" $commonName-glycanOverlaps.txt; then
+            if grep -q "^[0-5] contacts$" $commonName-glycanOverlaps.txt; then
                 pg=$(($pg + 1))
             fi
-            if grep -q "^[0-9] contacts$" $commonName-glycanCoreOverlaps.txt; then
+            if grep -q "^[0-5] contacts$" $commonName-glycanCoreOverlaps.txt; then
                 pgc=$(($pgc + 1))
             fi
         done 

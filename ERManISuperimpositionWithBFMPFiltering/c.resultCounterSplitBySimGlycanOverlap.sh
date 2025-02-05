@@ -17,9 +17,9 @@ do
     for simReplicate in `cat $simReplicateList`
     do
         totalStructures=`ls $folder/$simReplicate-ss*-proteinOverlaps.txt | grep -c "."`
-        totalNonClashing=`grep "^[0-9] contacts$" $folder/$simReplicate-ss*-proteinOverlaps.txt | grep -c "."`
-        totalNonClashingGlycan=`grep "^[0-9] contacts$" $folder/$simReplicate-ss*-glycanOverlaps.txt | grep -c "."`
-        totalNonClashingGlycanCore=`grep "^[0-9] contacts$" $folder/$simReplicate-ss*-glycanCoreOverlaps.txt | grep -c "."`
+        totalNonClashing=`grep "^[0-5] contacts$" $folder/$simReplicate-ss*-proteinOverlaps.txt | grep -c "."`
+        totalNonClashingGlycan=`grep "^[0-5] contacts$" $folder/$simReplicate-ss*-glycanOverlaps.txt | grep -c "."`
+        totalNonClashingGlycanCore=`grep "^[0-5] contacts$" $folder/$simReplicate-ss*-glycanCoreOverlaps.txt | grep -c "."`
         echo "$folder,$i,$totalNonClashing,$totalNonClashingGlycan,$totalNonClashingGlycanCore,$totalStructures"
         i=$(($i + 1))
     done

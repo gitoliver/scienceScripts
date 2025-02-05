@@ -12,7 +12,10 @@ nextNagResidue=$(($alignmentResidue - 1 ))
 thisGlycanLastResidueNumber=$(( $nextNagResidue + 10 )) # Funky selectors for overlaps. Assumes Man9
 thisGlycanManBResidueNumber=$(( $alignmentResidue + 1 ))
 source $alignerInputs
-
+if [ -z "${FIRST_GLYCAN_RESIDUE}" ]; then
+    echo "You need to set FIRST_GLYCAN_RESIDUE and LAST_GLYCAN_RESIDUE in your alignerInputs.txt file"
+    exit 1
+fi
 cd $outputFolder
 >chimeraOutput.txt
 for simReplicate in `cat ../$simReplicates`
